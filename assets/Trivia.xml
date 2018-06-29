@@ -1,0 +1,290 @@
+<trivia>
+	<question type="numeric" duration="7">
+		<text>Cuántos metros hay en un kilómetro?</text>
+		<answer>1000</answer>
+	</question>
+
+	<question type="single_choice" duration="10">
+		<text>Quién tiene 4 estómagos?</text>
+		<answer>2</answer>
+		<options>
+			<option>Una gallina</option>
+			<option>Una vaca</option>
+			<option>El Botija</option>
+			<option>Una máquina tragamonedas</option>
+		</options>
+	</question>
+
+
+	<!-- td: agregar mas opciones -->
+	<question type="single_choice" duration="15">
+		<text>Cuántos pies tiene un ciempiés?</text>
+		<answer>4</answer>
+		<options>
+			<option>100</option>
+			<option>74</option>
+			<option>104</option>
+			<option>Ninguna de las anteriores</option>
+		</options>
+	</question>
+
+	<question type="numeric" duration="12">
+		<text>¿A cuántos metros cuadrados equivale una hectárea?</text>
+		<answer>10000</answer>
+	</question>
+
+	<question type="textual" duration="5">
+		<text>Si a &lt; b, &amp; b &lt; 0, entonces el valor de a es?</text>
+		<answer>negativo</answer>
+	</question>
+
+	<question type="single_choice" duration="15">
+		<text>¿Cómo se llama la supercomputadora que controla el Discovery 1 en "2001: Odisea del Espacio"?</text>
+		<answer>2</answer>
+		<options>
+			<option>TMA-1</option>
+			<option>HAL 9000</option>
+			<option>ENIAC</option>
+			<option>HANGAR 68</option>
+		</options>
+	</question>
+
+	<question type="single_choice" duration="15">
+		<text>¿El nombre de la sustancia "Nicotina" proviene de:?</text>
+		<answer>1</answer>
+		<options>
+			<option>Jean Nicot que introdujo la planta del tabaco en Francia</option>
+			<option>De sus componentes: nitrógeno e hidrógeno, y su efecto insecticida</option>
+			<option>De su descubridor: Francesco Nicota</option>
+		</options>
+	</question>
+
+	<question type="numeric" duration="5">
+		<text>¿Cuántos lados tiene un triángulo rectángulo?</text>
+		<answer>3</answer>
+	</question>
+
+	<question type="single_choice" duration="13">
+		<text>¿Cuál es considerado el animal más venenoso del mundo?</text>
+		<answer>4</answer>
+		<options>
+			<option>La serpiente marina</option>
+			<option>El alacrán</option>
+			<option>El sapo dorado</option>
+			<option>La avispa marina</option>
+		</options>
+	</question>
+
+	<question type="single_choice" duration="9">
+		<text>¿La fuerza de gravitación es inversamente proporcional a:?</text>
+		<answer>3</answer>
+		<options>
+			<option>la masa</option>
+			<option>el peso</option>
+			<option>la distancia</option>
+			<option>la constante de gravitación</option>
+		</options>
+	</question>
+
+	<question type="single_choice" duration="15">
+		<text>¿Por qué los teclados no están en orden alfabético?</text>
+		<answer>2</answer>
+		<options>
+			<option>Porque el inventor es de apellido Qwerty</option>
+			<option>Para evitar que los mazos de la máquina de escribir chocaran</option>
+			<option>Para competir con Dvorak</option>
+			<option>El proyecto que creó la máquina de escribir se denominaba Qwerty</option>
+		</options>
+	</question>
+
+	<question type="single_choice" duration="8">
+		<text>¿De dónde proviene el aguacate?</text>
+		<answer>4</answer>
+		<options>
+			<option>China</option>
+			<option>India</option>
+			<option>Australia</option>
+			<option>América Central</option>
+		</options>
+	</question>
+
+	<question type="single_choice" duration="20">
+		<text>¿Cuál de las siguientes afirmaciones es válida?</text>
+		<answer>1</answer>
+		<options>
+			<option>La avispa es más delgada que la abeja y no pierde el aguijón al picar, la abeja sí</option>
+			<option>La abeja es más delgada que la avispa y no pierde el aguijón al picar, la avispa sí</option>
+			<option>La abeja es un insecto, la avispa es un arácnido</option>
+			<option>Ninguna de las anteriores</option>
+		</options>
+	</question>
+
+	<question type="single_choice" duration="11">
+		<text>Antes de ser cantante, Julio Iglesias era portero de:</text>
+		<answer>2</answer>
+		<options>
+			<option>Barcelona</option>
+			<option>Real Madrid</option>
+			<option>Celta de Vigo</option>
+			<option>Saprissa</option>
+		</options>
+	</question>
+
+	<question type="textual" duration="17">
+		<text>¿Cuál país actualmente es el mayor exportador mundial de piña?</text>
+		<answer>Costa Rica</answer>
+	</question>
+
+	<question type="single_choice" duration="12">
+		<text>¿Cuál de los siguientes alimentos NO es un veneno para la babosa?</text>
+		<answer>1</answer>
+		<options>
+			<option>Hojas putrefactas</option>
+			<option>La cerveza</option>
+			<option>La sal</option>
+			<option>Compuestos de metaldehido</option>
+		</options>
+	</question>
+
+	<question type="single_choice" duration="13">
+		<text>La población de la India y China juntas representa</text>
+		<answer>3</answer>
+		<options>
+			<option>tres cuartas partes de la población mundial</option>
+			<option>la mitad de la población mundial</option>
+			<option>un tercio de la población mundial</option>
+			<option>un cuarto de la población mundial</option>
+		</options>
+	</question>
+
+	<question type="single_choice" duration="11">
+		<text>El tejido que hace a los ojos del gato y otros animales reflejar la luz se llama</text>
+		<answer>2</answer>
+		<options>
+			<option>Tejido fotoreflector</option>
+			<option>Tapete de luz</option>
+			<option>Captaluces</option>
+			<option>Halógenos</option>
+		</options>
+	</question>
+
+	<question type="textual" duration="20">
+		<text>Después del Sol, la estrella más cercana a la Tierra está en la Constelación de:</text>
+		<answer>Alfa Centauro</answer>
+	</question>
+
+	<question type="single_choice" duration="16">
+		<text>A partir de este invento de 1877 se pudo en la humanidad grabar y reproducir sonido con éxito:</text>
+		<answer>1</answer>
+		<options>
+			<option>El Fonógrafo de Thomas Alva Edison</option>
+			<option>El Gramófono de Emile Berliner</option>
+			<option>El casete de Fritz Pfleumer</option>
+			<option>La Victrola de RCA</option>
+		</options>
+	</question>
+
+	<question type="single_choice" duration="11">
+		<text>La Esvástica es un símbolo inventado por</text>
+		<answer>3</answer>
+		<options>
+			<option>Los Nazis</option>
+			<option>Los Vikingos</option>
+			<option>Los Hindúes</option>
+			<option>Los Egipcios</option>
+		</options>
+	</question>
+
+	<question type="textual" duration="20">
+		<text>Según la leyenda, Tío Sam, la personificación nacional de Estados Unidos, fue de profesión un</text>
+		<answer>carnicero</answer>
+	</question>
+
+	<question type="single_choice" duration="13">
+		<text>"Watson, ven aquí" es una frase célebre asociada al siguiente hecho</text>
+		<answer>3</answer>
+		<options>
+			<option>Descubrimiento del ADN</option>
+			<option>Aparición de Sherlock Holmes en la radio</option>
+			<option>Invención del teléfono</option>
+			<option>Película "Casa Blanca"</option>
+		</options>
+	</question>
+
+	<question type="single_choice" duration="11">
+		<text>¿Cuál de los siguientes campos NO es premiado con un Nobel?</text>
+		<answer>3</answer>
+		<options>
+			<option>Física</option>
+			<option>Química</option>
+			<option>Biología</option>
+			<option>Economía</option>
+		</options>
+	</question>
+
+	<question type="textual" duration="18">
+		<text>¿Cuál es el país que ha ganado más certámenes de Miss Universo?</text>
+		<answer>Estados Unidos | USA | EEUU</answer>
+	</question>
+
+	<question type="textual" duration="15">
+		<text>La primera copa mundial de futbol en 1930 tuvo sede en este país:</text>
+		<answer>Uruguay</answer>
+	</question>
+
+	<question type="single_choice" duration="13">
+		<text>El máximo goleador en la historia del fútbol con 1329 goles es</text>
+		<answer>1</answer>
+		<options>
+			<option>Arthur Friedenreic (Brasil)</option>
+			<option>Maradona (Argentina)</option>
+			<option>Pelé (Brasil)</option>
+			<option>El Chunche (Deporái)</option>
+		</options>
+	</question>
+
+	<question type="single_choice" duration="13">
+		<text>El puente más alto del mundo, de 402 metros, es</text>
+		<answer>4</answer>
+		<options>
+			<option>Puente Sutong en China</option>
+			<option>Golden Gate en Estados Unidos</option>
+			<option>Puente sobre el Río Virilla, Costa Rica</option>
+			<option>Puente Baluarte en México</option>
+		</options>
+	</question>
+
+	<question type="single_choice" duration="9">
+		<text>El primer sistema operativo de la historia de la informática fue creado por</text>
+		<answer>4</answer>
+		<options>
+			<option>Microsoft</option>
+			<option>IBM</option>
+			<option>Apple</option>
+			<option>General Motors</option>
+			<option>DARPA</option>
+			<option>American Airlines</option>
+		</options>
+	</question>
+
+	<question type="textual" duration="14">
+		<text>Antónimo de: antónimo</text>
+		<answer>sinónimo</answer>
+	</question>
+
+	<question type="textual" duration="15">
+		<text>Cuál fue la primera compañía en implementar el concepto de ventanas (windows)</text>
+		<answer>Xerox</answer>
+	</question>
+
+	<question type="single_choice" duration="11">
+		<text>Según Galileo Galilei el movimiento natural de los cuerpos es:</text>
+		<answer>2</answer>
+		<options>
+			<option>Uniformemente acelerado</option>
+			<option>Rectilíneo uniforme</option>
+			<option>Elíptico</option>
+			<option>Ondulatorio</option>
+		</options>
+	</question>
+</trivia>
