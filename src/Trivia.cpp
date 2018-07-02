@@ -37,11 +37,13 @@ int Trivia::run()
 
 int Trivia::loadQuestions()
 {
+	// Open the question file as a Qt resource
 	const char* const filename = ":/Trivia.xml";
 	QFile file(filename);
 	if ( ! file.open(QIODevice::ReadOnly) )
 		return std::cerr << "qTrivia: could not open " << filename << std::endl, 2;
 
+	// Parse the question file as an XML document
 	QDomDocument document("trivia");
 	if ( ! document.setContent( &file ) )
 	{
@@ -50,20 +52,24 @@ int Trivia::loadQuestions()
 	}
 	file.close();
 
-	// print out the element names of all elements that are direct children
-	// of the outermost element.
-	QDomElement rootElemement = document.documentElement();
+	// Load each question from the document and fill the questions array
+	return loadQuestions(document.documentElement());
+}
 
-	QDomNode node = rootElemement.firstChild();
-	while ( ! node.isNull() )
+int Trivia::loadQuestions(const QDomElement& rootElement)
+{
+	// Load each question from the document
+	for ( QDomElement element = rootElement.firstChildElement(); ! element.isNull(); element = element.nextSiblingElement() )
 	{
-		// Try to convert the node to an element
-		QDomElement element = node.toElement();
-		if ( ! element.isNull() && element.tagName() == "question" )
+		// Only <question> elements are allowed to be children of the <trivia> root element
+		if ( element.tagName() == "question" )
 		{
+			// Use the type attribute required to create a question object
+			// <question type="single_choice">
 			const QString& type = element.attribute("type");
-//			std::cout << qPrintable(element.tagName()) << std::endl; // the node really is an element.
 			Question* question = createQuestion(type);
+
+			// If the question type was valid, load the rest of the question from the element
 			if ( question )
 			{
 				if ( question->loadFrom(element) )
@@ -74,7 +80,10 @@ int Trivia::loadQuestions()
 			else
 				return std::cerr << "trivia: invalid question type " << qPrintable(type) << std::endl, 3;
 		}
-		node = node.nextSibling();
+		else
+		{
+			return std::cerr << "trivia: invalid element type " << qPrintable(element.tagName()) << std::endl, 4;
+		}
 	}
 
 	return 0;

@@ -16,13 +16,13 @@ bool Question::loadFrom(const QDomElement& element)
 	const QDomElement& textElement = element.firstChildElement("text");
 	if ( textElement.isNull() )
 		return false;
-	this->text = textElement.toText().data();
+	this->text = textElement.firstChild().nodeValue();
 
 	// The question's answer is in a child element <answer>
 	const QDomElement& answerElement = element.firstChildElement("answer");
 	if ( answerElement.isNull() )
 		return false;
-	this->answer = answerElement.toText().data();
+	this->answer = answerElement.firstChild().nodeValue();
 
 	return true;
 }

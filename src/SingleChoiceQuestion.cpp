@@ -20,7 +20,7 @@ bool SingleChoiceQuestion::loadFrom(const QDomElement& element)
 	for ( QDomElement choice = choicesElement.firstChildElement(); ! choice.isNull(); choice = choice.nextSiblingElement() )
 	{
 		if ( choice.tagName() == "option" )
-			this->choices.append( choice.nodeValue() );
+			this->choices.append( choice.firstChild().nodeValue() );
 		else
 			return false;
 	}

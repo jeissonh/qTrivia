@@ -6,9 +6,9 @@
 
 #include "Common.h"
 
-//#include "Question.h"
-
-class Question; // Forward declaration
+// Forward declarations
+class Question;
+class QDomElement;
 
 class Trivia : public QApplication
 {
@@ -26,6 +26,7 @@ class Trivia : public QApplication
 
   private:
 	int loadQuestions();
+	int loadQuestions(const QDomElement& rootElemement);
 	bool askQuestion();
 	void printStatistics();
 };
