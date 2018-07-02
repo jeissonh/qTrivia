@@ -7,10 +7,12 @@ Question::Question()
 
 }
 
+#if 0
 void Question::print(std::ostream& out) const
 {
 	out << this->text << std::endl;
 }
+#endif
 
 bool Question::ask()
 {

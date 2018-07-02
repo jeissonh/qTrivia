@@ -5,16 +5,18 @@
 #include <limits>
 #include <string>
 
+#include <QDomElement>
+
 class Question
 {
   protected:
-	std::string text;
-	std::string answer;
+	QString text;
+	QString answer;
 
   public:
 	Question();
 	virtual ~Question() { }
-
+#if 0
 	friend std::istream& operator>>(std::istream& in, Question& question)
 	{
 		return question.read(in, true);
@@ -31,14 +33,30 @@ class Question
 		//std::getline(in, dummy);
 		return in;
 	}
+#endif
+	virtual bool loadFrom(const QDomElement& element)
+	{
+		const QDomElement& textElement = element.firstChildElement("text");
+		if ( textElement.isNull() )
+			return false;
+		this->text = textElement.toText().data();
 
+		const QDomElement& answerElement = element.firstChildElement("answer");
+		if ( answerElement.isNull() )
+			return false;
+		this->answer = answerElement.toText().data();
+
+		return true;
+	}
+
+#if 0
 	friend std::ostream& operator<<(std::ostream& out, const Question& question)
 	{
 		return out << '{' << question.text << "}[" << question.answer << ']';
 	}
 
-	virtual void print(std::ostream& out) const;
-
+	virtual void (std::ostream& out) const;
+#endif
 	bool ask();
 	virtual bool isRightAnswer(const std::string& playerAnswer) const = 0;
 };

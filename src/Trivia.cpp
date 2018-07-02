@@ -37,54 +37,46 @@ int Trivia::run()
 
 int Trivia::loadQuestions()
 {
-	QDomDocument document("mydocument");
-	QFile file("Trivia.xml");
-	if (!file.open(QIODevice::ReadOnly))
-		return 10;
-	if (!document.setContent(&file)) {
+	const char* const filename = ":/Trivia.xml";
+	QFile file(filename);
+	if ( ! file.open(QIODevice::ReadOnly) )
+		return std::cerr << "qTrivia: could not open " << filename << std::endl, 2;
+
+	QDomDocument document("trivia");
+	if ( ! document.setContent( &file ) )
+	{
 		file.close();
-		return 20;
+		return std::cerr << "qTrivia: invalid questions files " << filename << std::endl, 3;
 	}
 	file.close();
 
 	// print out the element names of all elements that are direct children
 	// of the outermost element.
-	QDomElement docElem = document.documentElement();
+	QDomElement rootElemement = document.documentElement();
 
-	QDomNode n = docElem.firstChild();
-	while(!n.isNull()) {
-		QDomElement e = n.toElement(); // try to convert the node to an element.
-		if(!e.isNull()) {
-			std::cout << qPrintable(e.tagName()) << std::endl; // the node really is an element.
-		}
-		n = n.nextSibling();
-	}
-/*
-	// Here we append a new element to the end of the document
-	QDomElement elem = document.createElement("img");
-	elem.setAttribute("src", "myimage.png");
-	docElem.appendChild(elem);
-
-
-
-	const char* const filename = "Trivia.xml";
-	std::ifstream input(filename);
-	if ( ! input )
-		return std::cerr << "trivia: could not open " << filename << std::endl, 2;
-
-	std::string type;
-	while ( std::getline( input, type ) )
+	QDomNode node = rootElemement.firstChild();
+	while ( ! node.isNull() )
 	{
-		Question* question = createQuestion(type);
-		if ( question )
+		// Try to convert the node to an element
+		QDomElement element = node.toElement();
+		if ( ! element.isNull() && element.tagName() == "question" )
 		{
-			input >> *question;
-			this->questions.push_back( question );
+			const QString& type = element.attribute("type");
+//			std::cout << qPrintable(element.tagName()) << std::endl; // the node really is an element.
+			Question* question = createQuestion(type);
+			if ( question )
+			{
+				if ( question->loadFrom(element) )
+					this->questions.push_back( question );
+				else
+					std::cerr << "trivia: invalid question at line " << element.lineNumber() << std::endl;
+			}
+			else
+				return std::cerr << "trivia: invalid question type " << qPrintable(type) << std::endl, 3;
 		}
-		else
-			return std::cerr << "trivia: invalid question type " << type << std::endl, 3;
+		node = node.nextSibling();
 	}
-*/
+
 	return 0;
 }
 
@@ -124,7 +116,7 @@ void Trivia::printStatistics()
 #include "SingleChoiceQuestion.h"
 
 // Factory method
-Question* Trivia::createQuestion(const std::string& type)
+Question* Trivia::createQuestion(const QString& type)
 {
 	// new Question(); // abstract classes could not be instanced
 	if ( type == "numeric" ) return new NumericQuestion();

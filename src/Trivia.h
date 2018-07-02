@@ -22,7 +22,7 @@ class Trivia : public QApplication
 	Trivia(int& argc, char *argv[]);
 	~Trivia();
 	int run();
-	static Question* createQuestion(const std::string& type);
+	static Question* createQuestion(const QString& type);
 
   private:
 	int loadQuestions();

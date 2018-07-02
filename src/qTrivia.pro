@@ -39,3 +39,6 @@ HEADERS  += MainWindow.h \
 
 DISTFILES += \
 	Trivia.xml
+
+RESOURCES += \
+    ../assets/assets.qrc
