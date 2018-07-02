@@ -1,64 +1,35 @@
 #ifndef QUESTION_H
 #define QUESTION_H
 
-#include <istream>
-#include <limits>
-#include <string>
+#include <iostream>
 
 #include <QDomElement>
 
 class Question
 {
+	/// Avoid copies of objects of this class
+	Q_DISABLE_COPY(Question)
+
   protected:
+	/// The question statement
 	QString text;
+	/// The right answer for this question
 	QString answer;
 
   public:
+	/// Constructor
 	Question();
-	virtual ~Question() { }
-#if 0
-	friend std::istream& operator>>(std::istream& in, Question& question)
-	{
-		return question.read(in, true);
-	}
-
-	virtual std::istream& read(std::istream& in, bool skipEmptyLine)
-	{
-		std::getline(in, this->text);
-		std::getline(in, this->answer);
-
-		if ( skipEmptyLine )
-			in.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-		//std::string dummy;
-		//std::getline(in, dummy);
-		return in;
-	}
-#endif
-	virtual bool loadFrom(const QDomElement& element)
-	{
-		const QDomElement& textElement = element.firstChildElement("text");
-		if ( textElement.isNull() )
-			return false;
-		this->text = textElement.toText().data();
-
-		const QDomElement& answerElement = element.firstChildElement("answer");
-		if ( answerElement.isNull() )
-			return false;
-		this->answer = answerElement.toText().data();
-
-		return true;
-	}
-
-#if 0
-	friend std::ostream& operator<<(std::ostream& out, const Question& question)
-	{
-		return out << '{' << question.text << "}[" << question.answer << ']';
-	}
-
-	virtual void (std::ostream& out) const;
-#endif
+	/// Destructor
+	virtual ~Question();
+	/// Loads this question from a <question> XML element
+	/// @return true on success, false if the XML is invalid
+	virtual bool loadFrom(const QDomElement& element);
+	/// Print the question to stdout or other file
+	virtual void print(std::ostream& out) const;
+	/// Asks the question to the player
 	bool ask();
-	virtual bool isRightAnswer(const std::string& playerAnswer) const = 0;
+	/// Return true if the player answer matches the expected answer for this question
+	virtual bool isRightAnswer(const QString& playerAnswer) const = 0;
 };
 
 #endif // QUESTION_H

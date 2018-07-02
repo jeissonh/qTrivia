@@ -1,5 +1,3 @@
-#include <cstdlib>
-
 #include "SingleChoiceQuestion.h"
 
 SingleChoiceQuestion::SingleChoiceQuestion()
@@ -7,27 +5,37 @@ SingleChoiceQuestion::SingleChoiceQuestion()
 
 }
 
-bool SingleChoiceQuestion::isRightAnswer(const std::string& playerAnswer) const
+bool SingleChoiceQuestion::loadFrom(const QDomElement& element)
 {
-	return std::strtol(playerAnswer.c_str(), nullptr, 10)
-			== std::strtol(this->answer.c_str(), nullptr, 10);
+	// Load the text and answer
+	if ( ! Question::loadFrom(element) )
+		return false;
+
+	// The question's choices are inside a <choices> element
+	const QDomElement& choicesElement = element.firstChildElement("options");
+	if ( choicesElement.isNull() )
+		return false;
+
+	// Each choice is a child of the <choices> element
+	for ( QDomElement choice = choicesElement.firstChildElement(); ! choice.isNull(); choice = choice.nextSiblingElement() )
+	{
+		if ( choice.tagName() == "option" )
+			this->choices.append( choice.nodeValue() );
+		else
+			return false;
+	}
+
+	return true;
 }
 
-std::istream& SingleChoiceQuestion::read(std::istream& in, bool skipEmptyLine)
+bool SingleChoiceQuestion::isRightAnswer(const QString& playerAnswer) const
 {
-	(void)skipEmptyLine;
-	Question::read(in, false);
-
-	std::string choice;
-	while ( std::getline(in, choice) && choice.length() > 0 )
-		this->choices.push_back(choice);
-
-	return in;
+	return playerAnswer.toLongLong() == this->answer.toLongLong();
 }
 
 void SingleChoiceQuestion::print(std::ostream& out) const
 {
 	Question::print(out);
-	for ( size_t index = 0; index < this->choices.size(); ++index )
-		out << (index + 1) << ". " << this->choices[index] << std::endl;
+	for ( int index = 0; index < this->choices.size(); ++index )
+		out << (index + 1) << ". " << qPrintable(this->choices[index]) << std::endl;
 }

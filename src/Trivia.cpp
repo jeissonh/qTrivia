@@ -98,12 +98,10 @@ int Trivia::loadQuestions()
 bool Trivia::askQuestion()
 {
 	return false;
-/*
 	size_t index = std::rand() % this->questions.size();
 	if ( (*this->questions[index]).ask() )
 		++this->score;
 	return std::cin.good();
-	*/
 }
 
 void Trivia::printStatistics()
