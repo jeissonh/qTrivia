@@ -27,7 +27,8 @@ SOURCES += main.cpp \
 	Question.cpp \
 	SingleChoiceQuestion.cpp \
 	TextualQuestion.cpp \
-	Trivia.cpp
+	Trivia.cpp \
+    GameMenuView.cpp
 
 HEADERS  += MainWindow.h \
 	Common.h \
@@ -35,10 +36,14 @@ HEADERS  += MainWindow.h \
 	Question.h \
 	SingleChoiceQuestion.h \
 	TextualQuestion.h \
-	Trivia.h
+	Trivia.h \
+    GameMenuView.h
 
 DISTFILES += \
 	Trivia.xml
 
 RESOURCES += \
     ../assets/assets.qrc
+
+FORMS += \
+    GameMenuView.ui

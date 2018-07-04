@@ -7,6 +7,7 @@
 #include "Common.h"
 
 // Forward declarations
+class MainWindow;
 class Question;
 class QDomElement;
 
@@ -17,6 +18,7 @@ class Trivia : public QApplication
   private:
 	QVector<Question*> questions;
 	long score = 0;
+	MainWindow* mainWindow = nullptr;
 
   public:
 	Trivia(int& argc, char *argv[]);

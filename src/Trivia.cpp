@@ -1,13 +1,11 @@
 #include <QDomDocument>
 #include <QFile>
 
-#include <fstream>
-#include <functional>
 #include <iostream>
-#include <random>
 #include <ctime>
 
 #include "Trivia.h"
+#include "MainWindow.h"
 #include "Question.h"
 
 Trivia::Trivia(int& argc, char* argv[])
@@ -17,6 +15,7 @@ Trivia::Trivia(int& argc, char* argv[])
 
 Trivia::~Trivia()
 {
+	delete this->mainWindow;
 	for ( int index = 0; index < this->questions.size(); ++index )
 		delete this->questions[index];
 }
@@ -26,11 +25,17 @@ int Trivia::run()
 	if ( int result = this->loadQuestions() )
 		return result;
 
+	this->mainWindow = new MainWindow(this->questions);
+	mainWindow->show();
+
 	std::srand( std::time(nullptr) + std::clock() );
+
+  #if 0
 	while ( this->askQuestion() )
 		;
 
 	this->printStatistics();
+  #endif
 
 	return this->exec();
 }
@@ -106,7 +111,6 @@ int Trivia::loadQuestions(const QDomElement& rootElement)
 
 bool Trivia::askQuestion()
 {
-	return false;
 	size_t index = std::rand() % this->questions.size();
 	if ( (*this->questions[index]).ask() )
 		++this->score;
