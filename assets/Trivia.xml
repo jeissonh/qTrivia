@@ -299,4 +299,20 @@
 		<text>La Escuela de Ciencias de la Computación e Informática de la UCR fue fundada en el año:</text>
 		<answer> 1981</answer>
 	</question>
+	<question type="single_choice" duration ="11">
+		<text>La siguiente película ganó todos los premios Óscar a los que fué nominada:</text>
+		<answer>3</answer>
+		<option>Ben-Hur</option>
+		<option>Titanic</option>
+		<option>El Señor de los Anillos: el retorno del Rey</option>
+		<option>Los Minions</option>
+	</question>
+	<question type="textual" duration ="10">
+		<text>El pokémon número 151 es:</text>
+		<answer> mew</answer>
+	</question>
+	<question type="textual" duration ="10">
+		<text>Primer nombre del protagonista de Final Fantasy VII:</text>
+		<answer> Cloud</answer>
+	</question>
 </trivia>
