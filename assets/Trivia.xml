@@ -315,4 +315,42 @@
 		<text>Primer nombre del protagonista de Final Fantasy VII:</text>
 		<answer> Cloud</answer>
 	</question>
+
+	<question type="single_choice" duration ="10">
+		<text>¿Quién ganó el mundial de futbol en 1998?</text>
+		<answer>1</answer>
+		<option>Francia</option>
+		<option>Costa Rica</option>
+		<option>Alemania</option>
+		<option>Brasil</option>
+	</question>
+
+	<question type="textual" duration ="11">
+		<text>Nombre del hogar de los Elfos en el señor de los anillos</text>
+		<answer>Rivendel</answer>
+	</question>
+
+	<question type="textual" duration ="11">
+		<text>Apellido de los protagonistas de Full Metal Alchemist</text>
+		<answer>Elric</answer>
+	</question>
+
+	<question type="numeric" duration ="10">
+		<text>Año de lanzamiento del álbum Back in Black</text>
+		<answer>1980</answer>
+	</question>
+
+	<question type="single_choice" duration ="10">
+		<text>¿Quién fue fundador del kernel de Linux?</text>
+		<answer>2</answer>
+		<option>Bll Gates</option>
+		<option>Linus Torvals</option>
+		<option>Dennis Ritchie</option>
+		<option>Joseph Wilson</option>
+	</question>
+
+	<question type="textual" duration ="11">
+		<text>Capital de Finlandia</text>
+		<answer>Helsinki</answer>
+	</question>
 </trivia>
