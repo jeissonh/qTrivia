@@ -315,4 +315,16 @@
 		<text>Primer nombre del protagonista de Final Fantasy VII:</text>
 		<answer> Cloud</answer>
 	</question>
+	<question type="numeric" duration ="10">
+		<text>En que año se fundó Pixar?</text>
+		<answer> 1979</answer>
+	</question>
+	<question type="numeric" duration ="10">
+		<text>En que año se casaron John Lennon y Yoko Ono?</text>
+		<answer> 1969</answer>
+	</question>
+	<question type="textual" duration ="10">
+		<text>El último color que fue agregado de los M&M's fue:</text>
+		<answer> Azul</answer>
+	</question>
 </trivia>
