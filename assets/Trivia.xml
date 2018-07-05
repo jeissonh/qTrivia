@@ -287,4 +287,16 @@
 			<option>Ondulatorio</option>
 		</options>
 	</question>
+	<question type="single_choice" duration ="11">
+		<text>Los fundadores de Google son:</text>
+		<answer>3</answer>
+		<option>Marc Merrill y Brandon Beck</option>
+		<option>Satya Nandella y Sundar Pichai</option>
+		<option>Larry Page y Sergei Brinn</option>
+		<option>John Lasseter y Ron Clements</option>
+	</question>
+	<question type="numeric" duration ="10">
+		<text>La Escuela de Ciencias de la Computación e Informática de la UCR fue fundada en el año:</text>
+		<answer> 1981</answer>
+	</question>
 </trivia>
