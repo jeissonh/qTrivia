@@ -369,4 +369,44 @@
 		<text>Capital de Finlandia</text>
 		<answer>Helsinki</answer>
 	</question>
+
+	<question type="single_choice" duration="12">
+		<text>Primer animal en el espacio</text>
+		<answer>1</answer>
+		<options>
+			<option>La mosca de la fruta</option>
+			<option>El mono</option>
+			<option>Micky Mouse</option>
+			<option>La perra Laika</option>
+		</options>
+	</question>
+
+	<question type="single_choice" duration="15">
+		<text>Una persona nacida el 30 de abril es de signo</text>
+		<answer>5</answer>
+		<options>
+			<option>Géminis</option>
+			<option>Acuario</option>
+			<option>Tauro</option>
+			<option>Aries</option>
+			<option>Ninguno de los otros</option>
+		</options>
+	</question>
+
+	<question type="numeric" duration="8">
+		<text>Los cromosomas sexuales del ser humano se encuentran en el par:</text>
+		<answer>23</answer>
+	</question>
+
+	<question type="single_choice" duration="15">
+		<text>¿Cuánto tiempo tarda un glóbulo rojo recorrer todo el circuito sanguíneo?</text>
+		<answer>2</answer>
+		<options>
+			<option>10 microsegundos</option>
+			<option>20 segundos</option>
+			<option>10 minutos</option>
+			<option>20 horas</option>
+			<option>30 días</option>
+		</options>
+	</question>
 </trivia>
