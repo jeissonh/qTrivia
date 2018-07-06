@@ -1,3 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE trivia SYSTEM "Trivia.dtd">
+
 <trivia>
 	<question type="numeric" duration="7">
 		<text>Cuántos metros hay en un kilómetro?</text>
@@ -287,30 +290,39 @@
 			<option>Ondulatorio</option>
 		</options>
 	</question>
+
 	<question type="single_choice" duration ="11">
 		<text>Los fundadores de Google son:</text>
 		<answer>3</answer>
-		<option>Marc Merrill y Brandon Beck</option>
-		<option>Satya Nandella y Sundar Pichai</option>
-		<option>Larry Page y Sergei Brinn</option>
-		<option>John Lasseter y Ron Clements</option>
+		<options>
+			<option>Marc Merrill y Brandon Beck</option>
+			<option>Satya Nandella y Sundar Pichai</option>
+			<option>Larry Page y Sergei Brinn</option>
+			<option>John Lasseter y Ron Clements</option>
+		</options>
 	</question>
+
 	<question type="numeric" duration ="10">
 		<text>La Escuela de Ciencias de la Computación e Informática de la UCR fue fundada en el año:</text>
 		<answer> 1981</answer>
 	</question>
+
 	<question type="single_choice" duration ="11">
 		<text>La siguiente película ganó todos los premios Óscar a los que fué nominada:</text>
 		<answer>3</answer>
-		<option>Ben-Hur</option>
-		<option>Titanic</option>
-		<option>El Señor de los Anillos: el retorno del Rey</option>
-		<option>Los Minions</option>
+		<options>
+			<option>Ben-Hur</option>
+			<option>Titanic</option>
+			<option>El Señor de los Anillos: el retorno del Rey</option>
+			<option>Los Minions</option>
+		</options>
 	</question>
+
 	<question type="textual" duration ="10">
 		<text>El pokémon número 151 es:</text>
 		<answer> mew</answer>
 	</question>
+
 	<question type="textual" duration ="10">
 		<text>Primer nombre del protagonista de Final Fantasy VII:</text>
 		<answer> Cloud</answer>
@@ -319,14 +331,16 @@
 	<question type="single_choice" duration ="10">
 		<text>¿Quién ganó el mundial de futbol en 1998?</text>
 		<answer>1</answer>
-		<option>Francia</option>
-		<option>Costa Rica</option>
-		<option>Alemania</option>
-		<option>Brasil</option>
+		<options>
+			<option>Francia</option>
+			<option>Costa Rica</option>
+			<option>Alemania</option>
+			<option>Brasil</option>
+		</options>
 	</question>
 
 	<question type="textual" duration ="11">
-		<text>Nombre del hogar de los Elfos en el señor de los anillos</text>
+		<text>Nombre del hogar de los Elfos en El señor de los anillos</text>
 		<answer>Rivendel</answer>
 	</question>
 
@@ -343,10 +357,12 @@
 	<question type="single_choice" duration ="10">
 		<text>¿Quién fue fundador del kernel de Linux?</text>
 		<answer>2</answer>
-		<option>Bll Gates</option>
-		<option>Linus Torvals</option>
-		<option>Dennis Ritchie</option>
-		<option>Joseph Wilson</option>
+		<options>
+			<option>Bll Gates</option>
+			<option>Linus Torvals</option>
+			<option>Dennis Ritchie</option>
+			<option>Joseph Wilson</option>
+		</options>
 	</question>
 
 	<question type="textual" duration ="11">

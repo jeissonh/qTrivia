@@ -1,0 +1,13 @@
+<!ELEMENT trivia (question+)>
+<!ATTLIST trivia name ID #IMPLIED>
+
+<!ELEMENT question (text, answer, options?)>
+<!ATTLIST question
+	type		CDATA	#REQUIRED
+	duration	CDATA	#REQUIRED>
+
+<!ELEMENT options (option+)>
+
+<!ELEMENT text (#PCDATA)>
+<!ELEMENT answer (#PCDATA)>
+<!ELEMENT option (#PCDATA)>
