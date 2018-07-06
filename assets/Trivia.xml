@@ -389,7 +389,7 @@
 			<option>Acuario</option>
 			<option>Tauro</option>
 			<option>Aries</option>
-			<option>Ninguno de los otros</option>
+			<option>Ninguno de las anteriores</option>
 		</options>
 	</question>
 
@@ -407,6 +407,29 @@
 			<option>10 minutos</option>
 			<option>20 horas</option>
 			<option>30 días</option>
+		</options>
+	</question>
+
+	<question type="single_choice" duration="15">
+		<text>¿Cuál de las siguientes disciplinas NO estudió Walter Mercado?</text>
+		<answer>4</answer>
+		<options>
+			<option>Pedagogía</option>
+			<option>Psicología</option>
+			<option>Farmacia</option>
+			<option>Astronomía</option>
+			<option>Artes dramáticas</option>
+		</options>
+	</question>
+
+	<question type="single_choice" duration="15">
+		<text>¿El programa Sábados Gigantes recibió un rércord Guinness por?</text>
+		<answer>3</answer>
+		<options>
+			<option>Entregar más de 3000 automóviles</option>
+			<option>Burlarse del público</option>
+			<option>Transmitir por más de 40 años</option>
+			<option>La cantidad de sombreros en el Chacal de la Trompeta</option>
 		</options>
 	</question>
 </trivia>
