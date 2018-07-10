@@ -8,16 +8,23 @@ namespace Ui
 	class GameMenuView;
 }
 
+/**
+	The game menu. It is shown in the MainWindow's central widget when the game is in game menu
+	state, according to the state machine.
+**/
 class GameMenuView : public QWidget
 {
 	Q_OBJECT
 
   public:
-	explicit GameMenuView(QWidget *parent = 0);
+	/// Constructor
+	explicit GameMenuView(QWidget* parent = nullptr);
+	/// Destructor
 	~GameMenuView();
 
   private:
-public: Ui::GameMenuView *ui;
+	/// A record that contains the user interface designed by QtDesigner
+	Ui::GameMenuView *ui;
 };
 
 #endif // GAMEMENUVIEW_H
